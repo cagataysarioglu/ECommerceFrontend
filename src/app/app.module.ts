@@ -10,6 +10,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { NavigatorComponent } from './components/navigator/navigator.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { from } from 'rxjs';
+import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { from } from 'rxjs';
     CategoryComponent,
     NavigatorComponent,
     VatAddedPipe,
+    FilterPipePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
