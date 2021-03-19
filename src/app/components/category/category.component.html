@@ -1,4 +1,11 @@
-<ul class="list-group">
+<div
+  *ngIf="dataLoaded == false"
+  class="spinner-grow text-info m-3"
+  role="status"
+>
+  <span class="visually-hidden">Loading...</span>
+</div>
+<ul *ngIf="dataLoaded == true" class="list-group">
   <li
     (click)="removeCurrentCategory()"
     routerLink="/products"

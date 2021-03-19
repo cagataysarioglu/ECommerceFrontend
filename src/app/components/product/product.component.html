@@ -1,4 +1,4 @@
-<div *ngIf="dataLoaded == false" class="spinner-border text-dark" role="status">
+<div *ngIf="dataLoaded == false" class="spinner-grow text-info m-3" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 <div class="mb-3">
@@ -6,7 +6,7 @@
   <input
     type="text"
     [(ngModel)]="filterText"
-    class="form-control"
+    class="form-control w-50"
     id="filterText"
     placeholder="Enter your search word"
   />
