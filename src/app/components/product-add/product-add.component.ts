@@ -39,10 +39,10 @@ export class ProductAddComponent implements OnInit {
     if (this.productAddForm.valid) {
       let productModel = Object.assign({}, this.productAddForm.value);
       this.productService.add(productModel).subscribe(
-        (response) => {
+        response => {
           this.toastrService.success(response.message, 'Successful');
         },
-        (responseError) => {
+        responseError => {
           if (responseError.error.Errors.length > 0) {
             for (let i = 0; i < responseError.error.Errors.length; i++) {
               this.toastrService.error(
