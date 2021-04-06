@@ -36,13 +36,15 @@ export class LoginComponent implements OnInit {
   login() {
     if (this.loginForm.valid) {
       let loginModel = Object.assign({}, this.loginForm.value);
-      this.authService.login(loginModel).subscribe((response) => {
-        this.toastrService.info(response.message);
-        localStorage.setItem('token', response.data.token);
-      }, responseError=>{
-        this.toastrService.error(responseError.error);
-        )
-      });
+      this.authService.login(loginModel).subscribe(
+        (response) => {
+          this.toastrService.info(response.message);
+          localStorage.setItem('token', response.data.token);
+        },
+        (responseError) => {
+          this.toastrService.error(responseError.error);
+        }
+      );
     }
   }
 }
